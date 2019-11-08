@@ -55,11 +55,12 @@ export default class Main extends React.Component {
     </View>
   );
 }
- 
+ //to add Note
 addNote() {
   // alert('test');
   if (this.state.noteText) {
-
+    
+//Gets the current Date
     var d= new Date();
     this.state.noteArray.push({
       'date': d.getFullYear() + "/" +
@@ -70,6 +71,8 @@ addNote() {
     this.setState({noteText: ''});
   }
 }
+
+//Deletes the note
 deleteNote(key) {
   this.state.noteArray.splice(key,1);
   this.setState({noteArray: this.state.noteArray})
